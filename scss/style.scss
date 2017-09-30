@@ -1,0 +1,25 @@
+$corp_fg: red;
+$corp_bg: orange;
+$corp_font: Arial;
+
+@mixin square($size, $color) {
+    width: $size;
+    height: $size;
+    background-color: $corp_fg;
+}
+body{
+    background-color: $corp_bg;
+    font-size: 1em;
+    font-family: $corp_font;
+}
+
+.small_square{
+    @include square(20px, $corp_bg)
+}
+
+.big_square{
+    @include square(40px, $corp_bg)
+}
+
+
+
